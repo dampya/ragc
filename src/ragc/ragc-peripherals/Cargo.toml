@@ -1,0 +1,17 @@
+[package]
+name = "ragc-peripherals"
+version = "0.1.0"
+authors = ["Om Dighe"]
+edition = "2018"
+license = "MIT OR Apache-2.0"
+
+[dependencies]
+defmt = { optional = true, version = "0.3" }
+crossbeam-channel = { optional = true, version = "0.5" }
+log = { optional = true, version = "0.4" }
+
+ragc-core = { path = "../ragc-core" }
+dsky-protocol = { path = "../dsky-protocol" }
+
+[features]
+vagc-peripherals = ["crossbeam-channel", "log"]
